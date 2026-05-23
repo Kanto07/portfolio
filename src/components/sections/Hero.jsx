@@ -1,0 +1,92 @@
+// Hero.jsx
+import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
+import profile from "../../assets/profile.jpg";
+import FadeIn from "../animations/FadeIn";
+
+export default function Hero() {
+  return (
+    <section
+      id="accueil"
+      className=" relative min-h-screen overflow-hidden bg-[var(--bg-primary)] flex items-center px-6"
+    >
+      {/* BACKGROUND IMAGE */}
+      <motion.div
+        animate={{
+          scale: [1, 1.05, 1],
+          y: [0, -20, 0],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+      >
+        <img
+          src={profile}
+          alt="background"
+          className="w-full object-cover grayscale select-none"
+        />
+      </motion.div>
+
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/80" />
+
+      <motion.div
+        animate={{
+          x: [0, 30, 0],
+          y: [0, -30, 0],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute bottom-[-150px] right-[-100px] w-[450px] h-[450px] rounded-full"
+      />
+
+      {/* CONTENT */}
+      <motion.div className="relative z-10 max-w-5xl text-start ml-24">
+        <FadeIn delay={0.2} direction="left">
+          <h1 className="text-5xl sm:text-2xl lg:text-5xl text-white leading-tight font-bold">
+            RAOELISON Kanto
+          </h1>
+        </FadeIn>
+        <FadeIn delay={0.2} direction="right">
+          <h2 className=" mt-6 text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 font-bold">
+            Créateur d'application web
+          </h2>
+        </FadeIn>
+
+        {/* DESCRIPTION */}
+        <FadeIn delay={0.2} direction="left">
+          <p className="mt-12 text-white text-lg leading-9 max-w-3xl mx-auto ">
+            Développeur web ayant travaillé en entreprise et en stage sur des
+            projet réels. Expérimenté dans la création d'applications web
+            performantes et la gestion de bases de données. Sérieux, motivé et
+            capable de travailler en équipe comme en autonomie.
+          </p>
+        </FadeIn>
+
+        {/* BUTTONS */}
+        <FadeIn delay={0.2} direction="right">
+          <div className="mt-14 flex flex-wrap items-center gap-6">
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+              }}
+              whileTap={{
+                scale: 0.97,
+              }}
+              className="group flex items-center gap-3 px-8 py-3 rounded-lg bg-gradient-to-r from-red-600 to-red-800 text-white font-semibold text-sm"
+            >
+              Télécharger mon CV
+              <ArrowDown size={18} />
+            </motion.button>
+          </div>
+        </FadeIn>
+      </motion.div>
+    </section>
+  );
+}

@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0b0b0f;
+  --bg-secondary: #141414;
+
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+
+  --accent-primary: #e50914;
+  --accent-secondary: #b20710;
+
+  --border-primary: rgba(255, 255, 255, 0.08);
+
+  --glow-red: rgba(229, 9, 20, 0.35);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
