@@ -2,7 +2,15 @@ import { useState } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-import { Sparkles, Layers3, LayoutGrid, X, ArrowUpRight } from "lucide-react";
+import {
+  Sparkles,
+  Layers3,
+  LayoutGrid,
+  X,
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 import SectionTitle from "../ui/SectionTitle";
 import FadeIn from "../animations/FadeIn";
@@ -10,20 +18,22 @@ import FadeIn from "../animations/FadeIn";
 import { projects } from "../../data/projects";
 
 const filters = [
-  { name: "All", icon: <Layers3 size={16} /> },
-  { name: "Frontend", icon: <LayoutGrid size={16} /> },
-  { name: "Fullstack", icon: <Sparkles size={16} /> },
+  { name: "Tous", icon: <Layers3 size={16} /> },
+  { name: "Projet en entreprise", icon: <LayoutGrid size={16} /> },
+  { name: "Projet de stage", icon: <Sparkles size={16} /> },
+  { name: "Projet Personnel", icon: <LayoutGrid size={16} /> },
 ];
 
 export default function ProjectsSection() {
   const [filter, setFilter] = useState("All");
 
   const [selectedProject, setSelectedProject] = useState(null);
+  const [currentImage, setCurrentImage] = useState(0);
 
   const filteredProjects =
-    filter === "All"
+    filter === "Tous"
       ? projects
-      : projects.filter((project) => project.category === filter);
+      : projects.filter((project) => project.type === filter);
 
   return (
     <FadeIn delay={0.3} direction="down">
@@ -38,7 +48,7 @@ export default function ProjectsSection() {
           <SectionTitle title="Mes Projets" />
 
           {/* filters */}
-          <div className="flex flex-wrap gap-4 mt-14 mb-14">
+          <div className="flex flex-wrap gap-4 mt-6 mb-10">
             {filters.map((item) => (
               <motion.button
                 key={item.name}
@@ -78,10 +88,10 @@ export default function ProjectsSection() {
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
                   whileHover={{ y: -8 }}
-                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl"
+                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl"
                 >
                   {/* image */}
-                  <div className="relative h-[240px] overflow-hidden">
+                  <div className="relative h-[200px] overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -89,22 +99,21 @@ export default function ProjectsSection() {
                     />
 
                     {/* overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/10 to-transparent" />
 
                     {/* title */}
                     <div className="absolute bottom-5 left-5">
                       <h3 className="text-2xl font-bold text-white">
                         {project.title}
                       </h3>
-
-                      <p className="mt-2 text-sm text-red-300 uppercase tracking-[0.18em]">
+                      <p className="text-sm text-gray-300 font-bold uppercase">
                         {project.category}
                       </p>
                     </div>
                   </div>
 
                   {/* buttons */}
-                  <div className="p-5 flex flex-wrap gap-3">
+                  <div className="p-3 flex flex-wrap gap-3">
                     {project.github && (
                       <a
                         href={project.github}
@@ -128,7 +137,10 @@ export default function ProjectsSection() {
                     )}
 
                     <button
-                      onClick={() => setSelectedProject(project)}
+                      onClick={() => {
+                        setSelectedProject(project);
+                        setCurrentImage(0);
+                      }}
                       className="px-5 py-2 rounded-lg bg-red-600 text-white text-sm hover:bg-red-700 transition"
                     >
                       Voir plus
@@ -154,7 +166,7 @@ export default function ProjectsSection() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.92 }}
                 transition={{ duration: 0.4 }}
-                className="relative w-full max-w-5xl overflow-hidden rounded-[36px] border border-white/10 bg-[#0B0B0F]"
+                className="relative w-full max-w-5xl overflow-hidden rounded-xl border border-white/10 bg-[#0B0B0F]"
               >
                 {/* close */}
                 <button
@@ -167,22 +179,56 @@ export default function ProjectsSection() {
                 {/* image */}
                 <div className="relative h-[380px]">
                   <img
-                    src={selectedProject.image}
+                    src={
+                      selectedProject.screenshots
+                        ? selectedProject.screenshots[currentImage]
+                        : selectedProject.image
+                    }
                     alt={selectedProject.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition duration-500"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0F] via-black/20 to-transparent" />
 
                   <div className="absolute bottom-8 left-8">
-                    <p className="text-red-400 uppercase tracking-[0.25em] text-sm">
-                      {selectedProject.category}
-                    </p>
-
-                    <h2 className="mt-3 text-5xl font-black text-white">
+                    <h2 className="mt-3 text-3xl font-black text-white">
                       {selectedProject.title}
                     </h2>
+                    <h2 className="mt-2 text-base text-gray-300 uppercase">
+                      {selectedProject.category}
+                    </h2>
                   </div>
+
+                  {selectedProject.screenshots &&
+                    selectedProject.screenshots.length > 1 && (
+                      <>
+                        <button
+                          onClick={() =>
+                            setCurrentImage((prev) =>
+                              prev === 0
+                                ? selectedProject.screenshots.length - 1
+                                : prev - 1,
+                            )
+                          }
+                          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-white hover:border-red-500/40"
+                        >
+                          <ChevronLeft size={20} />
+                        </button>
+
+                        <button
+                          onClick={() =>
+                            setCurrentImage((prev) =>
+                              prev === selectedProject.screenshots.length - 1
+                                ? 0
+                                : prev + 1,
+                            )
+                          }
+                          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-white hover:border-red-500/40"
+                        >
+                          <ChevronRight size={20} />
+                        </button>
+                      </>
+                    )}
                 </div>
 
                 {/* content */}
@@ -192,7 +238,7 @@ export default function ProjectsSection() {
                   </p>
 
                   {/* tech */}
-                  <div className="mt-8 flex flex-wrap gap-3">
+                  <div className="mt-4 flex flex-wrap gap-3">
                     {selectedProject.tech.map((item, index) => (
                       <div
                         key={index}
@@ -204,7 +250,7 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* links */}
-                  <div className="mt-10 flex flex-wrap gap-4">
+                  <div className="mt-4 flex flex-wrap gap-4">
                     {selectedProject.github && (
                       <a
                         href={selectedProject.github}

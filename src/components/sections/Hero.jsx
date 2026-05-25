@@ -72,18 +72,20 @@ export default function Hero() {
         {/* BUTTONS */}
         <FadeIn delay={0.2} direction="right">
           <div className="mt-14 flex flex-wrap items-center gap-6">
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-              }}
-              whileTap={{
-                scale: 0.97,
-              }}
-              className="group flex items-center gap-3 px-8 py-3 rounded-lg bg-gradient-to-r from-red-600 to-red-800 text-white font-semibold text-sm"
-            >
-              Télécharger mon CV
-              <ArrowDown size={18} />
-            </motion.button>
+            <a href="/CV_Kanto.pdf" download>
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
+                className="group flex items-center gap-3 px-8 py-3 rounded-lg bg-gradient-to-r from-red-600 to-red-800 text-white font-semibold text-sm"
+              >
+                Télécharger mon CV
+                <ArrowDown size={18} />
+              </motion.button>
+            </a>
           </div>
         </FadeIn>
       </motion.div>
