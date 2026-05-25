@@ -1,13 +1,6 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Mail,
-  Sparkles,
-  Phone,
-  LinkedinIcon,
-  MapPin,
-  MessageCircle,
-} from "lucide-react";
+import { Mail, Sparkles, Phone, MapPin, MessageCircle } from "lucide-react";
 
 import emailjs from "@emailjs/browser";
 
@@ -27,10 +20,10 @@ export default function ContactSection() {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_kedtpjo",
+        "template_lchcltg",
         formRef.current,
-        "YOUR_PUBLIC_KEY",
+        "jZNeV5vVEfXsxeUFH",
       )
       .then(
         () => {
@@ -43,9 +36,9 @@ export default function ContactSection() {
             setSuccess(false);
           }, 4000);
         },
-        () => {
+        (error) => {
           setLoading(false);
-          alert("Erreur lors de l'envoi du message");
+          console.log("EMAILJS ERROR :", error);
         },
       );
   };
@@ -145,12 +138,29 @@ export default function ContactSection() {
 
                     {/* linkedin */}
                     <a
-                      href="https://linkedin.com/in/your-linkedin"
+                      href="https://www.linkedin.com/in/kanto-raoelison-88209b200/"
                       target="_blank"
                       rel="noreferrer"
                       className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-2 hover:border-cyan-500/30 transition"
                     >
-                      <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center"></div>
+                      <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-cyan-400"
+                        >
+                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                          <rect x="2" y="9" width="4" height="12" />
+                          <circle cx="4" cy="4" r="2" />
+                        </svg>
+                      </div>
 
                       <div className="text-sm">
                         <p className="text-gray-500">LinkedIn</p>

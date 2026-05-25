@@ -25,7 +25,7 @@ const filters = [
 ];
 
 export default function ProjectsSection() {
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("Tous");
 
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
@@ -177,7 +177,7 @@ export default function ProjectsSection() {
                 </button>
 
                 {/* image */}
-                <div className="relative h-[380px]">
+                <div className="relative h-[500px]">
                   <img
                     src={
                       selectedProject.screenshots
@@ -185,10 +185,10 @@ export default function ProjectsSection() {
                         : selectedProject.image
                     }
                     alt={selectedProject.title}
-                    className="w-full h-full object-cover transition duration-500"
+                    className="w-full h-full object-contain transition duration-500"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0F] via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0F] via-black/10 to-transparent" />
 
                   <div className="absolute bottom-8 left-8">
                     <h2 className="mt-3 text-3xl font-black text-white">
@@ -232,7 +232,7 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* content */}
-                <div className="p-8">
+                <div className="p-4">
                   <p className="text-gray-400 leading-8 text-[15px]">
                     {selectedProject.description}
                   </p>

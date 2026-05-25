@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { Home, Briefcase, Code2, FolderKanban, Layers3 } from "lucide-react";
+import {
+  Home,
+  Briefcase,
+  Code2,
+  FolderKanban,
+  Layers3,
+  Mail,
+} from "lucide-react";
 import profile from "../../assets/profile.jpg";
 
 const navItems = [
@@ -33,6 +40,11 @@ const navItems = [
     name: "Projets",
     to: "projects",
     icon: <FolderKanban size={15} />,
+  },
+  {
+    name: "Contact",
+    to: "contact",
+    icon: <Mail size={15} />,
   },
 ];
 
