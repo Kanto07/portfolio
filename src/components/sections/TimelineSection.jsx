@@ -76,19 +76,19 @@ export default function TimelineSection() {
                 >
                   <div className="relative z-10">
                     {/* TOP */}
-                    <h2 className="text-white font-semibold mb-4 text-2xl">
+                    <h2 className="text-white font-semibold mb-4 text-2xl text-start sm:text-center">
                       {type}
                     </h2>
 
                     {/* CARDS */}
-                    <div className="grid grid-cols-2 gap-6 items-center">
+                    <div className="grid grid-cols-2 sm:grid-cols-1 gap-6 items-center">
                       {items.map((exp, index) => (
                         <motion.div
                           key={index}
                           initial={{ opacity: 0, y: 30 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.08 }}
-                          className="rounded-3xl border border-white/10 bg-black/20 backdrop-blur-xl p-6 h-[375px]"
+                          className="rounded-3xl border border-white/10 bg-black/20 backdrop-blur-xl p-6 h-[375px] sm:h-[325px]"
                         >
                           {/* TOP */}
                           <div className="flex flex-wrap items-start justify-between gap-5">
@@ -100,7 +100,7 @@ export default function TimelineSection() {
                               </div>
 
                               {/* TITLE */}
-                              <h3 className="mt-3 text-xl font-bold text-white">
+                              <h3 className="mt-3 text-xl sm:text-lg font-bold text-white">
                                 {exp.title}
                               </h3>
 

@@ -48,7 +48,7 @@ export default function ProjectsSection() {
           <SectionTitle title="Mes Projets" />
 
           {/* filters */}
-          <div className="flex flex-wrap gap-4 mt-6 mb-10">
+          <div className="sm:grid sm:grid-cols-2 flex flex-wrap gap-4 my-10">
             {filters.map((item) => (
               <motion.button
                 key={item.name}

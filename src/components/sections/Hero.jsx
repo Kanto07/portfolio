@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="accueil"
-      className=" relative min-h-screen overflow-hidden bg-[var(--bg-primary)] flex items-center px-6"
+      className="relative min-h-screen overflow-hidden bg-[var(--bg-primary)] flex items-center px-6"
     >
       {/* BACKGROUND IMAGE */}
       <motion.div
@@ -26,42 +26,29 @@ export default function Hero() {
         <img
           src={profile}
           alt="background"
-          className="w-full object-cover grayscale select-none"
+          className="w-full object-cover h-full"
         />
       </motion.div>
 
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/80" />
 
-      <motion.div
-        animate={{
-          x: [0, 30, 0],
-          y: [0, -30, 0],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute bottom-[-150px] right-[-100px] w-[450px] h-[450px] rounded-full"
-      />
-
       {/* CONTENT */}
-      <motion.div className="relative z-10 max-w-5xl text-start ml-24">
+      <motion.div className="relative z-10 max-w-5xl text-start sm:text-center sm:ml-0 lg:ml-10 xl:ml-24">
         <FadeIn delay={0.2} direction="left">
-          <h1 className="text-5xl sm:text-2xl lg:text-5xl text-white leading-tight font-bold">
+          <h1 className="sm:text-5xl lg:text-4xl xl:text-5xl text-white leading-tight font-bold">
             RAOELISON Kanto
           </h1>
         </FadeIn>
         <FadeIn delay={0.2} direction="right">
-          <h2 className=" mt-6 text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 font-bold">
+          <h2 className="mt-6 sm:mt-2 text-2xl sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 font-bold">
             Créateur d'application web
           </h2>
         </FadeIn>
 
         {/* DESCRIPTION */}
         <FadeIn delay={0.2} direction="left">
-          <p className="mt-12 text-white text-lg leading-9 max-w-3xl mx-auto ">
+          <p className="mt-12 sm:mt-4 text-white text-lg leading-9 sm:leading-2 max-w-3xl mx-auto ">
             Développeur web ayant travaillé en entreprise et en stage sur des
             projet réels. Expérimenté dans la création d'applications web
             performantes et la gestion de bases de données. Sérieux, motivé et
@@ -71,7 +58,7 @@ export default function Hero() {
 
         {/* BUTTONS */}
         <FadeIn delay={0.2} direction="right">
-          <div className="mt-14 flex flex-wrap items-center gap-6">
+          <div className="mt-14 flex flex-wrap items-center sm:justify-center gap-6">
             <a href="/CV_Kanto.pdf" download>
               <motion.button
                 whileHover={{

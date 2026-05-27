@@ -64,7 +64,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.03] backdrop-blur-2xl mt-8"
           >
-            <div className="relative z-10 grid lg:grid-cols-2 gap-14 p-8 lg:p-8">
+            <div className="relative z-10 grid grid-cols-2 sm:grid-cols-1 gap-14 p-8 lg:p-8">
               {/* LEFT */}
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-red-500/20 bg-red-500/10 text-red-300 text-sm mb-8">
