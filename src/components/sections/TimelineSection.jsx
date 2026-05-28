@@ -118,7 +118,7 @@ export default function TimelineSection() {
                           </p>
 
                           {/* TECH */}
-                          <div className="mt-6 flex flex-wrap sm:grid sm:grid-cols-3 gap-3">
+                          <div className="mt-6 flex flex-wrap sm:grid sm:grid-cols-2 gap-3">
                             {exp.tech.map((item, i) => (
                               <div
                                 key={i}

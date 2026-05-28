@@ -41,9 +41,6 @@ export default function ProjectsSection() {
         id="projects"
         className="relative mt-32 px-6 overflow-hidden bg-gradient-to-b from-[#070B14] to-[#050816]"
       >
-        {/* glow */}
-        <div className="absolute right-[-200px] top-0 w-[500px] h-[500px] rounded-full bg-red-600/10 blur-[140px]" />
-
         <div className="max-w-7xl mx-auto relative z-10">
           <SectionTitle title="Mes Projets" />
 
