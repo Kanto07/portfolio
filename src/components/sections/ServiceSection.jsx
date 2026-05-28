@@ -52,7 +52,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="mt-6 text-center text-gray-400 max-w-3xl mx-auto leading-8"
+            className="mt-6 text-center text-gray-400 max-w-3xl mx-auto leading-8 sm:leading-7"
           >
             Je conçois et développe des solutions digitales modernes,
             performantes et immersives adaptées à vos besoins.
@@ -93,12 +93,14 @@ export default function ServicesSection() {
                   </div>
 
                   {/* title */}
-                  <h3 className="mt-8 text-2xl font-bold text-white">
+                  <h3 className="mt-8 sm:mt-4 text-2xl font-bold text-white">
                     {service.title}
                   </h3>
 
                   {/* text */}
-                  <p className="mt-5 text-gray-400 leading-8">{service.text}</p>
+                  <p className="mt-5 sm:mt-3 text-gray-400 leading-8 sm:leading-7">
+                    {service.text}
+                  </p>
                 </div>
 
                 {/* netflix glow bottom */}

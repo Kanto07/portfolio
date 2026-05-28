@@ -36,9 +36,7 @@ export default function Hero() {
       {/* CONTENT */}
       <motion.div className="relative z-10 max-w-5xl text-start sm:text-center sm:ml-0 lg:ml-10 xl:ml-24">
         <FadeIn delay={0.2} direction="left">
-          <h1 className="sm:text-5xl lg:text-4xl xl:text-5xl text-white leading-tight font-bold">
-            RAOELISON Kanto
-          </h1>
+          <h1 className="text-4xl text-white font-bold">RAOELISON Kanto</h1>
         </FadeIn>
         <FadeIn delay={0.2} direction="right">
           <h2 className="mt-6 sm:mt-2 text-2xl sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 font-bold">
@@ -48,7 +46,7 @@ export default function Hero() {
 
         {/* DESCRIPTION */}
         <FadeIn delay={0.2} direction="left">
-          <p className="mt-12 sm:mt-4 text-white text-lg leading-9 sm:leading-2 max-w-3xl mx-auto ">
+          <p className="mt-12 sm:mt-4 text-white text-lg sm:text-base leading-9 sm:leading-8 max-w-3xl mx-auto ">
             Développeur web ayant travaillé en entreprise et en stage sur des
             projet réels. Expérimenté dans la création d'applications web
             performantes et la gestion de bases de données. Sérieux, motivé et

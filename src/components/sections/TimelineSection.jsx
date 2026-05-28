@@ -46,7 +46,7 @@ export default function TimelineSection() {
           <SectionTitle title="Expériences" />
 
           {/* SLIDER */}
-          <div className="relative mt-10 flex items-center justify-center">
+          <div className="relative mt-10 sm:mt-4 flex items-center justify-center">
             {/* PREV */}
             <button
               onClick={prevSlide}
@@ -88,7 +88,7 @@ export default function TimelineSection() {
                           initial={{ opacity: 0, y: 30 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.08 }}
-                          className="rounded-3xl border border-white/10 bg-black/20 backdrop-blur-xl p-6 h-[375px] sm:h-[325px]"
+                          className="rounded-3xl border border-white/50 bg-black/20 backdrop-blur-xl p-6 h-[375px]"
                         >
                           {/* TOP */}
                           <div className="flex flex-wrap items-start justify-between gap-5">
@@ -113,12 +113,12 @@ export default function TimelineSection() {
                           </div>
 
                           {/* DESCRIPTION */}
-                          <p className="mt-4 text-gray-400 leading-8 text-[15px]">
+                          <p className="mt-4 sm:mt-2 text-gray-400 leading-8 sm:leading-7 text-[15px]">
                             {exp.description}
                           </p>
 
                           {/* TECH */}
-                          <div className="mt-6 flex flex-wrap gap-3">
+                          <div className="mt-6 flex flex-wrap sm:grid sm:grid-cols-3 gap-3">
                             {exp.tech.map((item, i) => (
                               <div
                                 key={i}

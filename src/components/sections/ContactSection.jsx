@@ -77,7 +77,7 @@ export default function ContactSection() {
                   <span className="block text-red-500">d'exception</span>
                 </h3>
 
-                <p className="text-gray-400 text-base leading-8 mt-8">
+                <p className="text-gray-400 text-base leading-8 sm:leading-7 mt-8 sm:mt-6">
                   Vous avez un projet, une idée ou une collaboration ?
                   Contactez-moi pour créer une expérience moderne, performante
                   et élégante.
@@ -86,7 +86,7 @@ export default function ContactSection() {
                 {/* infos */}
                 <div className="mt-10">
                   {/* grid infos */}
-                  <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-2 sm:grid-cols-1 gap-5">
                     {/* email */}
                     <a
                       href="mailto:raoelisonkanto@gmail.com"
@@ -192,12 +192,12 @@ export default function ContactSection() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="relative rounded-[32px] border border-white/10 bg-[#0F0F11]/80 p-8 backdrop-blur-xl"
+                  className="relative rounded-[32px] border border-white/10 bg-[#0F0F11]/80 p-8 sm:p-4 backdrop-blur-xl"
                 >
                   <div className="absolute inset-0 rounded-[32px]" />
 
                   <div className="relative z-10">
-                    <h4 className="text-2xl font-bold text-white mb-2">
+                    <h4 className="text-2xl sm:text-xl font-bold text-white mb-2">
                       Envoyer un message
                     </h4>
 

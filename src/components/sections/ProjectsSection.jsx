@@ -48,14 +48,14 @@ export default function ProjectsSection() {
           <SectionTitle title="Mes Projets" />
 
           {/* filters */}
-          <div className="sm:grid sm:grid-cols-2 flex flex-wrap gap-4 my-10">
+          <div className="sm:grid sm:grid-cols-1 flex flex-wrap gap-4 my-10">
             {filters.map((item) => (
               <motion.button
                 key={item.name}
                 onClick={() => setFilter(item.name)}
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ y: -3 }}
-                className={`relative overflow-hidden flex items-center gap-3 px-6 py-3 rounded-full border backdrop-blur-xl transition-all duration-300 ${
+                className={`relative overflow-hidden flex items-center justify-center gap-2 px-6 py-3 rounded-full border backdrop-blur-xl transition-all duration-300 ${
                   filter === item.name
                     ? "border-red-500 bg-red-500/10 text-red-300 shadow-[0_0_30px_rgba(229,9,20,0.25)]"
                     : "border-white/10 bg-white/[0.03] text-gray-300 hover:border-red-500/30"
@@ -99,7 +99,7 @@ export default function ProjectsSection() {
                     />
 
                     {/* overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/10 sm:via-black/40 to-transparent" />
 
                     {/* title */}
                     <div className="absolute bottom-5 left-5">
