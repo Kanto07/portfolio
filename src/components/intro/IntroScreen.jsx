@@ -59,11 +59,11 @@ export default function IntroScreen({ onComplete }) {
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: zooming ? 0 : 1, y: zooming ? -50 : 0 }}
           transition={{ duration: 1.2 }}
-          className="text-white text-[3rem] sm:text-[5rem] lg:text-[3rem] font-black tracking-[-0.05em] leading-[0.9] mb-10"
+          className="text-white text-5xl sm:text-4xl font-black tracking-[-0.05em] leading-[0.9] mb-10"
         >
           Bienvenue
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800 italic font-light">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800 font-light">
             dans mon Portfolio
           </span>
         </motion.h1>
