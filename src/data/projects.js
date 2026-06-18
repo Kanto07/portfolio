@@ -100,13 +100,13 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Style Bruxelles Palermo",
+    title: "Salon de Coiffure (Style Bruxelles Palermo)",
     type: "Projet en entreprise",
     category: "MG-Consulting IT&ACT",
     image: coiffure,
 
     description:
-      "Développement d’un site vitrine moderne pour un salon de coiffure en Belgique avec optimisation responsive et intégration d’une interface élégante.",
+      "Développement d'un site vitrine moderne pour un salon de coiffure en Belgique avec optimisation responsive et intégration d'une interface élégante.",
 
     tech: ["Nuxt.js", "Tailwind CSS", "git", "gitlab"],
     github: "",

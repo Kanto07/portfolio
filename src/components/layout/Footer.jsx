@@ -30,7 +30,7 @@ export default function Footer() {
                 KR
               </h3>
               <p className="text-sm text-gray-500">
-                Développeur fullstact Symfony
+                Développeur fullstack Symfony
               </p>
             </div>
           </div>
