@@ -74,7 +74,7 @@ export default function Navbar() {
         className="fixed top-0 left-0 w-full z-50"
       >
         <div className="max-w-7xl mx-auto px-5 lg:px-10 pt-4">
-          <div className="h-20 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-2xl px-5 flex items-center justify-between shadow-[0_8px_40px_rgba(0,0,0,0.35)]">
+          <div className="h-20 rounded-2xl backdrop-blur-2xl px-5 flex items-center justify-between">
             {/* LEFT */}
             <motion.div
               whileHover={{

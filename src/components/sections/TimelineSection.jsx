@@ -76,7 +76,7 @@ export default function TimelineSection() {
                 >
                   <div className="relative z-10">
                     {/* TOP */}
-                    <h2 className="text-white font-semibold mb-4 text-2xl text-start sm:text-center">
+                    <h2 className="text-white font-semibold mb-4 sm:text-lg xl:text-2xl text-start sm:text-center">
                       {type}
                     </h2>
 
@@ -88,7 +88,7 @@ export default function TimelineSection() {
                           initial={{ opacity: 0, y: 30 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.08 }}
-                          className="rounded-3xl border border-white/50 bg-black/20 backdrop-blur-xl p-6 h-[375px]"
+                          className="rounded-3xl border border-white/50 bg-black/20 backdrop-blur-xl sm:p-4 xl:p-6 h-[400px] overflow-scroll"
                         >
                           {/* TOP */}
                           <div className="flex flex-wrap items-start justify-between gap-5">
@@ -100,7 +100,7 @@ export default function TimelineSection() {
                               </div>
 
                               {/* TITLE */}
-                              <h3 className="mt-3 text-xl sm:text-lg font-bold text-white">
+                              <h3 className="sm:mt-1 xl:mt-3 text-xl sm:text-base font-bold text-white">
                                 {exp.title}
                               </h3>
 
@@ -113,16 +113,22 @@ export default function TimelineSection() {
                           </div>
 
                           {/* DESCRIPTION */}
-                          <p className="mt-4 sm:mt-2 text-gray-400 leading-8 sm:leading-7 text-[15px]">
+                          <p className="mt-4 sm:mt-2 text-gray-400 leading-8 sm:leading-5 sm:text-[12px] xl:text-[15px]">
                             {exp.description}
                           </p>
 
                           {/* TECH */}
-                          <div className="mt-6 flex flex-wrap sm:grid sm:grid-cols-2 gap-3">
+                          <div
+                            className={`mt-6 flex flex-wrap sm:grid gap-3 ${
+                              exp.tech.length === 1
+                                ? "sm:grid-cols-1"
+                                : "sm:grid-cols-2"
+                            }`}
+                          >
                             {exp.tech.map((item, i) => (
                               <div
                                 key={i}
-                                className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-300 text-[10px] uppercase tracking-[0.18em]"
+                                className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-300 sm:text-[8px] xl:text-[10px] uppercase tracking-[0.18em]"
                               >
                                 {item}
                               </div>

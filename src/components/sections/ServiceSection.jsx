@@ -52,7 +52,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="mt-6 text-center text-gray-400 max-w-3xl mx-auto leading-8 sm:leading-7"
+            className="sm:mt-4 xl:mt-6 text-lg sm:text-sm xl:text-base text-center text-gray-400 max-w-3xl mx-auto leading-8 sm:leading-7"
           >
             Je conçois et développe des solutions digitales modernes,
             performantes et immersives adaptées à vos besoins.
@@ -79,7 +79,7 @@ export default function ServicesSection() {
                 whileHover={{
                   y: -10,
                 }}
-                className={`group relative overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 transition-all duration-500 ${service.border}`}
+                className={`group relative overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.03] backdrop-blur-xl sm:p-6 xl:p-8 transition-all duration-500 ${service.border}`}
               >
                 {/* hover glow */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-white/[0.02] to-transparent" />
@@ -87,18 +87,18 @@ export default function ServicesSection() {
                 <div className="relative z-10">
                   {/* icon */}
                   <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-white shadow-2xl ${service.glow}`}
+                    className={`sm:w-12 sm:h-12 xl:w-16 xl:h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-white shadow-2xl ${service.glow}`}
                   >
                     {service.icon}
                   </div>
 
                   {/* title */}
-                  <h3 className="mt-8 sm:mt-4 text-2xl font-bold text-white">
+                  <h3 className="mt-8 sm:mt-4 sm:text-xl xl:text-2xl font-bold text-white">
                     {service.title}
                   </h3>
 
                   {/* text */}
-                  <p className="mt-5 sm:mt-3 text-gray-400 leading-8 sm:leading-7">
+                  <p className="mt-5 sm:mt-2 text-gray-400 leading-8 sm:leading-6 sm:text-[13px] xl:text-[15px]">
                     {service.text}
                   </p>
                 </div>

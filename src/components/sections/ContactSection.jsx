@@ -72,27 +72,27 @@ export default function ContactSection() {
                   Disponible pour vos projets
                 </div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
+                <h3 className="sm:text-lg xl:text-2xl font-bold text-white leading-tight">
                   Construisons quelque chose
                   <span className="block text-red-500">d'exception</span>
                 </h3>
 
-                <p className="text-gray-400 text-base leading-8 sm:leading-7 mt-8 sm:mt-6">
+                <p className="text-gray-400 sm:text-sm xl:text-base leading-8 sm:leading-6 mt-8 sm:mt-6">
                   Vous avez un projet, une idée ou une collaboration ?
                   Contactez-moi pour créer une expérience moderne, performante
                   et élégante.
                 </p>
 
                 {/* infos */}
-                <div className="mt-10">
+                <div className="sm:mt-5 xl:mt-10">
                   {/* grid infos */}
                   <div className="grid grid-cols-2 sm:grid-cols-1 gap-5">
                     {/* email */}
                     <a
                       href="mailto:raoelisonkanto@gmail.com"
-                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-2 hover:border-red-500/30 transition"
+                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] sm:px-2 xl:px-5 py-2 hover:border-red-500/30 transition"
                     >
-                      <div className="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+                      <div className="sm:w-8 sm:h-8 xl:w-12 xl:h-12 sm:rounded-lg xl:rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
                         <Mail size={18} className="text-red-400" />
                       </div>
 
@@ -107,9 +107,9 @@ export default function ContactSection() {
                     {/* phone */}
                     <a
                       href="tel:+261345703232"
-                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-2 hover:border-blue-500/30 transition"
+                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] sm:px-2 xl:px-5 py-2 hover:border-blue-500/30 transition"
                     >
-                      <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                      <div className="sm:w-8 sm:h-8 xl:w-12 xl:h-12 sm:rounded-lg xl:rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
                         <Phone size={18} className="text-blue-400" />
                       </div>
 
@@ -124,9 +124,9 @@ export default function ContactSection() {
                       href="https://wa.me/261000000000"
                       target="_blank"
                       rel="noreferrer"
-                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-2 hover:border-green-500/30 transition"
+                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] sm:px-2 xl:px-5 py-2 hover:border-green-500/30 transition"
                     >
-                      <div className="w-12 h-12 rounded-2xl bg-green-500/10 border border-green-500/20 flex items-center justify-center">
+                      <div className="sm:w-8 sm:h-8 xl:w-12 xl:h-12 sm:rounded-lg xl:rounded-2xl bg-green-500/10 border border-green-500/20 flex items-center justify-center">
                         <MessageCircle size={18} className="text-green-400" />
                       </div>
 
@@ -141,9 +141,9 @@ export default function ContactSection() {
                       href="https://www.linkedin.com/in/kanto-raoelison-88209b200/"
                       target="_blank"
                       rel="noreferrer"
-                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-2 hover:border-cyan-500/30 transition"
+                      className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] sm:px-2 xl:px-5 py-2 hover:border-cyan-500/30 transition"
                     >
-                      <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
+                      <div className="sm:w-8 sm:h-8 xl:w-12 xl:h-12 sm:rounded-lg xl:rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="18"
@@ -170,8 +170,8 @@ export default function ContactSection() {
                   </div>
 
                   {/* localisation */}
-                  <div className="mt-5 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-2">
-                    <div className="w-12 h-12 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
+                  <div className="mt-5 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] sm:px-2 xl:px-5 py-2">
+                    <div className="sm:w-8 sm:h-8 xl:w-12 xl:h-12 sm:rounded-lg xl:rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
                       <MapPin size={18} className="text-orange-400" />
                     </div>
 
@@ -201,7 +201,7 @@ export default function ContactSection() {
                       Envoyer un message
                     </h4>
 
-                    <p className="text-gray-400 mb-8">
+                    <p className="text-gray-400 mb-8 text-sm">
                       Réponse rapide et accompagnement personnalisé.
                     </p>
 

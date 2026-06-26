@@ -36,19 +36,19 @@ export default function Hero() {
       {/* CONTENT */}
       <motion.div className="relative z-10 max-w-5xl text-start sm:text-center sm:ml-0 lg:ml-10 xl:ml-24">
         <FadeIn delay={0.2} direction="left">
-          <h1 className="text-4xl text-white font-bold">
+          <h1 className="sm:text-2xl xl:text-4xl text-white font-bold">
             RAOELISON Kanto Hobiana
           </h1>
         </FadeIn>
         <FadeIn delay={0.2} direction="right">
-          <h2 className="mt-6 sm:mt-2 text-2xl sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 font-bold">
+          <h2 className="mt-6 sm:mt-2 sm:text-base xl:text-2xl sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 font-bold">
             Créateur d'application web
           </h2>
         </FadeIn>
 
         {/* DESCRIPTION */}
         <FadeIn delay={0.2} direction="left">
-          <p className="mt-12 sm:mt-4 text-white text-lg sm:text-base leading-9 sm:leading-8 max-w-3xl mx-auto ">
+          <p className="mt-12 sm:mt-4 text-white text-lg sm:text-sm leading-9 sm:leading-7 max-w-3xl mx-auto ">
             Développeur web ayant travaillé en entreprise et en stage sur des
             projet réels. Expérimenté dans la création d'applications web
             performantes et la gestion de bases de données. Sérieux, motivé et

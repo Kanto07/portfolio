@@ -100,10 +100,10 @@ export default function ProjectsSection() {
 
                     {/* title */}
                     <div className="absolute bottom-5 left-5">
-                      <h3 className="text-2xl font-bold text-white">
+                      <h3 className="sm:text-xl xl:text-2xl font-bold text-white">
                         {project.title}
                       </h3>
-                      <p className="text-sm text-gray-300 font-bold uppercase">
+                      <p className="mt-2 text-sm text-gray-300 font-bold uppercase">
                         {project.category}
                       </p>
                     </div>
