@@ -88,7 +88,7 @@ export default function TimelineSection() {
                           initial={{ opacity: 0, y: 30 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.08 }}
-                          className="rounded-3xl border border-white/50 bg-black/20 backdrop-blur-xl sm:p-4 xl:p-6 h-[400px] overflow-scroll"
+                          className="rounded-3xl border border-white/50 bg-black/20 backdrop-blur-xl sm:p-4 xl:p-6 h-[400px] overflow-y-auto"
                         >
                           {/* TOP */}
                           <div className="flex flex-wrap items-start justify-between gap-5">

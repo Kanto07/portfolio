@@ -59,7 +59,7 @@ export default function IntroScreen({ onComplete }) {
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: zooming ? 0 : 1, y: zooming ? -50 : 0 }}
           transition={{ duration: 1.2 }}
-          className="text-white text-5xl sm:text-4xl font-black tracking-[-0.05em] leading-[0.9] mb-10"
+          className="text-white text-4xl sm:text-2xl font-black tracking-[-0.05em] leading-[0.9] sm:mb-4 xl:mb-10"
         >
           Bienvenue
           <br />
@@ -74,7 +74,7 @@ export default function IntroScreen({ onComplete }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: zooming ? 0 : 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="max-w-2xl text-zinc-400 leading-8 text-lg mb-16"
+          className="max-w-2xl text-zinc-400 sm:leading-7 xl:leading-8 sm:text-sm xl:text-lg mb-16"
         >
           Découvrez mon univers digital, mes projets, mes compétences et mon
           expérience à travers une expérience immersive inspirée du cinéma
@@ -94,7 +94,7 @@ export default function IntroScreen({ onComplete }) {
               ? { duration: 10, ease: [0.22, 1, 0.36, 1] }
               : { duration: 5, repeat: Infinity, ease: "easeInOut" }
           }
-          className="relative w-[320px] h-[320px] rounded-full overflow-hidden border border-white/10"
+          className="relative sm:w-[160px] sm:h-[160px] xl:w-[320px] xl:h-[320px] rounded-full overflow-hidden border border-white/10"
         >
           {/* IMAGE */}
 
@@ -103,7 +103,7 @@ export default function IntroScreen({ onComplete }) {
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             src={profile}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover grayscale opacity-90"
+            className="absolute inset-0 w-full h-full object-cover"
           />
 
           {/* OVERLAY */}
@@ -122,17 +122,6 @@ export default function IntroScreen({ onComplete }) {
 
           <div className="absolute inset-0 rounded-full border border-red-500/30" />
         </motion.div>
-
-        {/* AUTO TEXT */}
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: zooming ? 0 : 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="mt-14 text-zinc-500 uppercase tracking-[0.35em] text-xs"
-        >
-          Immersive Digital Experience
-        </motion.p>
       </div>
     </motion.section>
   );

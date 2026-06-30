@@ -74,7 +74,7 @@ export default function Navbar() {
         className="fixed top-0 left-0 w-full z-50"
       >
         <div className="max-w-7xl mx-auto px-5 lg:px-10 pt-4">
-          <div className="h-20 rounded-2xl backdrop-blur-2xl px-5 flex items-center justify-between">
+          <div className="h-20 rounded-2xl backdrop-blur-2xl sm:px-2 xl:px-5 flex items-center justify-between gap-4">
             {/* LEFT */}
             <motion.div
               whileHover={{
@@ -93,11 +93,11 @@ export default function Navbar() {
               </div>
 
               <div className="flex flex-col">
-                <span className="text-red-600 font-black text-2xl tracking-[0.25em] leading-none">
+                <span className="text-red-600 font-black text-xl tracking-[0.25em] leading-none">
                   KR
                 </span>
 
-                <span className="text-[11px] text-zinc-500 tracking-[0.3em] uppercase">
+                <span className="text-[11px] text-zinc-500 tracking-[0.1em] uppercase">
                   Développeur
                 </span>
               </div>
