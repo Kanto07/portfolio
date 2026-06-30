@@ -1,7 +1,7 @@
 // Hero.jsx
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import profile from "../../assets/profile.jpg";
+import profile from "../../assets/bg_profile.jpg";
 import FadeIn from "../animations/FadeIn";
 
 export default function Hero() {
