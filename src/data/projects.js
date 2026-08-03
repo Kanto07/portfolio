@@ -11,7 +11,7 @@ import terri3 from "../assets/terri3.png";
 
 import coiffure from "../assets/coiffure.png";
 
-import qic1 from "../assets/qic_login.png";
+import qic1 from "../assets/accueil_qic.png";
 import qic2 from "../assets/qic_analyse.png";
 import qic3 from "../assets/qic_analyse1.png";
 import qic4 from "../assets/qic_dossier.png";
