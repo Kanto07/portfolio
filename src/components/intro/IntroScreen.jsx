@@ -76,9 +76,9 @@ export default function IntroScreen({ onComplete }) {
           transition={{ delay: 0.5, duration: 1 }}
           className="max-w-2xl text-zinc-400 sm:leading-7 xl:leading-8 sm:text-sm xl:text-lg mb-16"
         >
-          Découvrez mon univers digital, mes projets, mes compétences et mon
-          expérience à travers une expérience immersive inspirée du cinéma
-          moderne.
+          Découvrez mon parcours de développeur, mes compétences techniques et
+          les projets que j'ai réalisés, de la conception au développement
+          d'applications web et mobiles modernes, performantes et évolutives.
         </motion.p>
 
         {/* PORTAL */}

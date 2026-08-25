@@ -1,14 +1,14 @@
 export const experiences = [
   {
     type: "Expérience Professionnelle",
-    year: "Décembre 2024 - Juin 2026",
+    year: "Décembre 2024 - Août 2026",
     title: "Développeur Web - CDI",
     company: "MG Consulting IT&ACT",
     description:
       "Conception et amélioration des fonctionnalités backend avec Symfony.",
     tech: [
       "Symfony",
-      "NextJS",
+      "Nuxt JS",
       "Tailwind CSS",
       "MySQL",
       "GitLab",

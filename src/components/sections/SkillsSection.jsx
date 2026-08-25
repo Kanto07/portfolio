@@ -24,16 +24,28 @@ const skills = [
         border: "border-[#777BB4]/20",
       },
       {
-        name: "HTML / CSS3",
+        name: "HTML",
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         bg: "bg-[#E34F26]/10",
         border: "border-[#E34F26]/20",
+      },
+      {
+        name: "CSS",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        bg: "bg-[#1572B6]/10",
+        border: "border-[#1572B6]/20",
       },
       {
         name: "C#",
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
         bg: "bg-[#68217A]/10",
         border: "border-[#68217A]/20",
+      },
+      {
+        name: "SQL",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        bg: "bg-[#4479A1]/10",
+        border: "border-[#4479A1]/20",
       },
     ],
   },
@@ -61,10 +73,22 @@ const skills = [
         border: "border-cyan-400/20",
       },
       {
+        name: "Nuxt JS",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
+        bg: "bg-[#00DC82]/10",
+        border: "border-[#00DC82]/20",
+      },
+      {
         name: "Tailwind CSS",
         logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
         bg: "bg-cyan-400/10",
         border: "border-cyan-400/20",
+      },
+      {
+        name: "Bootstrap",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+        bg: "bg-[#7952B3]/10",
+        border: "border-[#7952B3]/20",
       },
     ],
   },
@@ -155,7 +179,7 @@ export default function SkillsSection() {
               </div>
 
               {/* tech grid */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
                 {group.items.map((tech, index) => (
                   <motion.div
                     key={tech.name}
